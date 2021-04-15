@@ -1,5 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router'
+import logo from '../Images/messengerBotLogo2.png'
 
 function Navigation() {
   const history = useHistory()
@@ -13,10 +14,13 @@ function Navigation() {
   return (
     <div>
       <nav style={{display: 'flex', backgroundColor: 'blueviolet', justifyContent: 'space-between'}}>
-        <h2>Messenger Bot App</h2>
         <div style={{display: 'flex'}}>
-          <button className="btn btn-warning" onClick={goToHomePage}>Home</button>
-          <button className="btn btn-primary" onClick={goToAllMessagePage}>All messages</button>
+          <img src={logo} style={{margin: 3}} width="55" height="55" className="d-inline-block align-top" alt=""/>
+          <h2 style={{margin: 3}}>Messenger Bot App</h2>
+        </div>
+        <div style={{display: 'flex', margin: 3}}>
+          <button className="btn btn-warning" style={{margin: 3}} onClick={goToHomePage}>Home</button>
+          <button className="btn btn-primary" style={{margin: 3}}  onClick={goToAllMessagePage}>All messages</button>
         </div>
       </nav>
     </div>

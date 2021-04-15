@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './Views/Home';
 import AllMessenger from './Views/AllMessages';
 import Navigation from './Components/Navigation';
+import ChatPage from './Views/ChatPage';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <Switch>
         <Route path="/allMessages">
           <AllMessenger />
+        </Route>
+        <Route path="/chat">
+          <ChatPage />
         </Route>
         <Route path="/">
           <Home />
